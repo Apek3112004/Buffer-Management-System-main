@@ -7,8 +7,8 @@ FILES = files
 
 all: table join select
 
-table: $(SRC)/table.cpp include/Tables.hpp
-	$(CXX) $(CXXFLAGS) $(SRC)/table.cpp -o $(BIN)/table
+table: table.cpp include/Tables.hpp
+	$(CXX) $(CXXFLAGS) table.cpp -o $(BIN)/table
 
 join: $(SRC)/join.cpp include/Tables.hpp
 	$(CXX) $(CXXFLAGS) $(SRC)/join.cpp -o $(BIN)/join
