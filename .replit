@@ -10,7 +10,7 @@ build = ["sh", "-c", "make"]
 run = ["sh", "-c", "g++ -std=c++20 -Iinclude src/table.cpp -o table && ./table"]
 
 [workflows]
-runButton = "Run Join"
+runButton = "Run Select"
 
 [[workflows.workflow]]
 name = "Build and Run"
@@ -50,3 +50,16 @@ args = "g++ -std=c++20 -O2 -Wall -Wextra -Iinclude src/join.cpp src/DiskManager.
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "./bin/join"
+
+[[workflows.workflow]]
+name = "Run Select"
+author = 18972025
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "g++ -std=c++20 -O2 -Wall -Wextra -Iinclude src/select.cpp src/DiskManager.cpp src/Page.cpp -o bin/select"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./bin/select"
