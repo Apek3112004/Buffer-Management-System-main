@@ -8,3 +8,19 @@ channel = "stable-24_05"
 [deployment]
 build = ["sh", "-c", "make"]
 run = ["sh", "-c", "g++ -std=c++20 -Iinclude src/table.cpp -o table && ./table"]
+
+[workflows]
+runButton = "Build and Run"
+
+[[workflows.workflow]]
+name = "Build and Run"
+author = 18972025
+mode = "parallel"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "make table"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./bin/table"
