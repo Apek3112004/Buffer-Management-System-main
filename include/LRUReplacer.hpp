@@ -37,6 +37,6 @@ struct LRUReplacer : public Replacer<N>
 	auto unpin(frame_id_t frame_id) -> void override;
 };
 
-#include "LRUReplacer.inl"
+#include "../src/LRUReplacer.inl"
 
 #endif // _LRU_REPLACER_HPP_

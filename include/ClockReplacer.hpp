@@ -33,6 +33,6 @@ struct ClockReplacer : public Replacer<N>
 	auto unpin(frame_id_t frame_id) -> void override;
 };
 
-#include "ClockReplacer.inl"
+#include "../src/ClockReplacer.inl"
 
 #endif // _CLOCK_REPLACER_HPP_
