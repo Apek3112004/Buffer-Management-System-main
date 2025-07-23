@@ -1,0 +1,10 @@
+modules = ["cpp-clang14"]
+compile = "make"
+run = "g++ -std=c++20 -Iinclude src/table.cpp -o table && ./table"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+build = ["sh", "-c", "make"]
+run = ["sh", "-c", "g++ -std=c++20 -Iinclude src/table.cpp -o table && ./table"]
