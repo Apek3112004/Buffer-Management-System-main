@@ -75,6 +75,6 @@ struct BufferPoolManager
 	auto unpin_page(page_id_t page_id) -> bool;
 };
 
-#include "BufferPoolManager.inl"
+#include "../src/BufferPoolManager.inl"
 
 #endif // _BUFFER_POOL_MANAGER_HPP_
