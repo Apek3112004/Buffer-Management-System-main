@@ -1,0 +1,1159 @@
+Fetch  page   50 Frame    0
+Pin    Page   50 Frame    0 Pin Count  1
+Fetch  page    0 Frame    1
+Pin    Page    0 Frame    1 Pin Count  1
+Fetch  page   51 Frame    2
+Pin    Page   51 Frame    2 Pin Count  1
+Fetch  page   52 Frame    3
+Pin    Page   52 Frame    3 Pin Count  1
+Fetch  page   53 Frame    4
+Pin    Page   53 Frame    4 Pin Count  1
+Unpin  Page   50 Frame    0 Pin Count  0
+Fetch  page   54 Frame    5
+Pin    Page   54 Frame    5 Pin Count  1
+Fetch  page   55 Frame    6
+Pin    Page   55 Frame    6 Pin Count  1
+Fetch  page    1 Frame    7
+Pin    Page    1 Frame    7 Pin Count  1
+Fetch  page   56 Frame    8
+Pin    Page   56 Frame    8 Pin Count  1
+Unpin  Page   51 Frame    2 Pin Count  0
+Unpin  Page   53 Frame    4 Pin Count  0
+Unpin  Page   52 Frame    3 Pin Count  0
+Fetch  page   57 Frame    9
+Pin    Page   57 Frame    9 Pin Count  1
+Fetch  page   58 Frame   10
+Pin    Page   58 Frame   10 Pin Count  1
+Fetch  page    2 Frame   11
+Pin    Page    2 Frame   11 Pin Count  1
+Fetch  page   59 Frame   12
+Pin    Page   59 Frame   12 Pin Count  1
+Unpin  Page    0 Frame    1 Pin Count  0
+Unpin  Page   54 Frame    5 Pin Count  0
+Unpin  Page   55 Frame    6 Pin Count  0
+Fetch  page   60 Frame   13
+Pin    Page   60 Frame   13 Pin Count  1
+Fetch  page   61 Frame   14
+Pin    Page   61 Frame   14 Pin Count  1
+Fetch  page   62 Frame   15
+Pin    Page   62 Frame   15 Pin Count  1
+Fetch  page    3 Frame   16
+Pin    Page    3 Frame   16 Pin Count  1
+Fetch  page   63 Frame   17
+Pin    Page   63 Frame   17 Pin Count  1
+Fetch  page   64 Frame   18
+Pin    Page   64 Frame   18 Pin Count  1
+Unpin  Page   58 Frame   10 Pin Count  0
+Unpin  Page    1 Frame    7 Pin Count  0
+Unpin  Page   56 Frame    8 Pin Count  0
+Unpin  Page   57 Frame    9 Pin Count  0
+Fetch  page   65 Frame   19
+Pin    Page   65 Frame   19 Pin Count  1
+Fetch  page   66 Frame   20
+Pin    Page   66 Frame   20 Pin Count  1
+Fetch  page    4 Frame   21
+Pin    Page    4 Frame   21 Pin Count  1
+Unpin  Page   59 Frame   12 Pin Count  0
+Unpin  Page    2 Frame   11 Pin Count  0
+Unpin  Page   62 Frame   15 Pin Count  0
+Unpin  Page   60 Frame   13 Pin Count  0
+Unpin  Page   61 Frame   14 Pin Count  0
+Fetch  page   67 Frame   22
+Pin    Page   67 Frame   22 Pin Count  1
+Fetch  page   68 Frame   23
+Pin    Page   68 Frame   23 Pin Count  1
+Fetch  page   69 Frame   24
+Pin    Page   69 Frame   24 Pin Count  1
+Unpin  Page   63 Frame   17 Pin Count  0
+Unpin  Page   64 Frame   18 Pin Count  0
+Fetch  page   70 Frame   25
+Pin    Page   70 Frame   25 Pin Count  1
+Fetch  page   71 Frame   26
+Pin    Page   71 Frame   26 Pin Count  1
+Fetch  page   72 Frame   27
+Pin    Page   72 Frame   27 Pin Count  1
+Unpin  Page   68 Frame   23 Pin Count  0
+Unpin  Page   66 Frame   20 Pin Count  0
+Unpin  Page    3 Frame   16 Pin Count  0
+Unpin  Page   67 Frame   22 Pin Count  0
+Unpin  Page   65 Frame   19 Pin Count  0
+Fetch  page   73 Frame   28
+Pin    Page   73 Frame   28 Pin Count  1
+Fetch  page    5 Frame   29
+Pin    Page    5 Frame   29 Pin Count  1
+Fetch  page   74 Frame   30
+Pin    Page   74 Frame   30 Pin Count  1
+Fetch  page   75 Frame   31
+Pin    Page   75 Frame   31 Pin Count  1
+Unpin  Page   70 Frame   25 Pin Count  0
+Unpin  Page   69 Frame   24 Pin Count  0
+Evict  Page   50 Frame    0
+Fetch  page   76 Frame    0
+Pin    Page   76 Frame    0 Pin Count  1
+Evict  Page    0 Frame    1
+Fetch  page   77 Frame    1
+Pin    Page   77 Frame    1 Pin Count  1
+Evict  Page   51 Frame    2
+Fetch  page   78 Frame    2
+Pin    Page   78 Frame    2 Pin Count  1
+Unpin  Page   71 Frame   26 Pin Count  0
+Unpin  Page   73 Frame   28 Pin Count  0
+Unpin  Page    4 Frame   21 Pin Count  0
+Unpin  Page   72 Frame   27 Pin Count  0
+Evict  Page   52 Frame    3
+Fetch  page   79 Frame    3
+Pin    Page   79 Frame    3 Pin Count  1
+Evict  Page   53 Frame    4
+Fetch  page    6 Frame    4
+Pin    Page    6 Frame    4 Pin Count  1
+Evict  Page   54 Frame    5
+Fetch  page   80 Frame    5
+Pin    Page   80 Frame    5 Pin Count  1
+Evict  Page   55 Frame    6
+Fetch  page   81 Frame    6
+Pin    Page   81 Frame    6 Pin Count  1
+Evict  Page    1 Frame    7
+Fetch  page   82 Frame    7
+Pin    Page   82 Frame    7 Pin Count  1
+Evict  Page   56 Frame    8
+Fetch  page   83 Frame    8
+Pin    Page   83 Frame    8 Pin Count  1
+Unpin  Page    5 Frame   29 Pin Count  0
+Unpin  Page   76 Frame    0 Pin Count  0
+Unpin  Page   77 Frame    1 Pin Count  0
+Unpin  Page   75 Frame   31 Pin Count  0
+Unpin  Page   74 Frame   30 Pin Count  0
+Evict  Page   57 Frame    9
+Fetch  page   84 Frame    9
+Pin    Page   84 Frame    9 Pin Count  1
+Evict  Page   58 Frame   10
+Fetch  page    7 Frame   10
+Pin    Page    7 Frame   10 Pin Count  1
+Evict  Page    2 Frame   11
+Fetch  page   85 Frame   11
+Pin    Page   85 Frame   11 Pin Count  1
+Evict  Page   59 Frame   12
+Fetch  page   86 Frame   12
+Pin    Page   86 Frame   12 Pin Count  1
+Unpin  Page   81 Frame    6 Pin Count  0
+Unpin  Page   82 Frame    7 Pin Count  0
+Unpin  Page   78 Frame    2 Pin Count  0
+Unpin  Page   80 Frame    5 Pin Count  0
+Unpin  Page   79 Frame    3 Pin Count  0
+Evict  Page   60 Frame   13
+Fetch  page   87 Frame   13
+Pin    Page   87 Frame   13 Pin Count  1
+Evict  Page   61 Frame   14
+Fetch  page   88 Frame   14
+Pin    Page   88 Frame   14 Pin Count  1
+Evict  Page   62 Frame   15
+Fetch  page   89 Frame   15
+Pin    Page   89 Frame   15 Pin Count  1
+Evict  Page    3 Frame   16
+Fetch  page    8 Frame   16
+Pin    Page    8 Frame   16 Pin Count  1
+Evict  Page   63 Frame   17
+Fetch  page   90 Frame   17
+Pin    Page   90 Frame   17 Pin Count  1
+Unpin  Page   84 Frame    9 Pin Count  0
+Unpin  Page   83 Frame    8 Pin Count  0
+Unpin  Page   85 Frame   11 Pin Count  0
+Unpin  Page    6 Frame    4 Pin Count  0
+Evict  Page   64 Frame   18
+Fetch  page   91 Frame   18
+Pin    Page   91 Frame   18 Pin Count  1
+Evict  Page   65 Frame   19
+Fetch  page   92 Frame   19
+Pin    Page   92 Frame   19 Pin Count  1
+Evict  Page   66 Frame   20
+Fetch  page   93 Frame   20
+Pin    Page   93 Frame   20 Pin Count  1
+Unpin  Page   89 Frame   15 Pin Count  0
+Unpin  Page    7 Frame   10 Pin Count  0
+Unpin  Page   86 Frame   12 Pin Count  0
+Unpin  Page   87 Frame   13 Pin Count  0
+Unpin  Page   88 Frame   14 Pin Count  0
+Evict  Page    4 Frame   21
+Fetch  page    9 Frame   21
+Pin    Page    9 Frame   21 Pin Count  1
+Evict  Page   67 Frame   22
+Fetch  page   94 Frame   22
+Pin    Page   94 Frame   22 Pin Count  1
+Evict  Page   68 Frame   23
+Fetch  page   95 Frame   23
+Pin    Page   95 Frame   23 Pin Count  1
+Evict  Page   69 Frame   24
+Fetch  page   96 Frame   24
+Pin    Page   96 Frame   24 Pin Count  1
+Unpin  Page   91 Frame   18 Pin Count  0
+Unpin  Page   90 Frame   17 Pin Count  0
+Evict  Page   70 Frame   25
+Fetch  page   97 Frame   25
+Pin    Page   97 Frame   25 Pin Count  1
+Evict  Page   71 Frame   26
+Fetch  page   98 Frame   26
+Pin    Page   98 Frame   26 Pin Count  1
+Evict  Page   72 Frame   27
+Fetch  page   10 Frame   27
+Pin    Page   10 Frame   27 Pin Count  1
+Evict  Page   73 Frame   28
+Fetch  page   99 Frame   28
+Pin    Page   99 Frame   28 Pin Count  1
+Evict  Page    5 Frame   29
+Fetch  page  100 Frame   29
+Pin    Page  100 Frame   29 Pin Count  1
+Unpin  Page    8 Frame   16 Pin Count  0
+Unpin  Page   95 Frame   23 Pin Count  0
+Unpin  Page   93 Frame   20 Pin Count  0
+Unpin  Page   92 Frame   19 Pin Count  0
+Unpin  Page   94 Frame   22 Pin Count  0
+Evict  Page   74 Frame   30
+Fetch  page  101 Frame   30
+Pin    Page  101 Frame   30 Pin Count  1
+Evict  Page   75 Frame   31
+Fetch  page  102 Frame   31
+Pin    Page  102 Frame   31 Pin Count  1
+Evict  Page   76 Frame    0
+Fetch  page  103 Frame    0
+Pin    Page  103 Frame    0 Pin Count  1
+Evict  Page   77 Frame    1
+Fetch  page  104 Frame    1
+Pin    Page  104 Frame    1 Pin Count  1
+Evict  Page   78 Frame    2
+Fetch  page   11 Frame    2
+Pin    Page   11 Frame    2 Pin Count  1
+Evict  Page   79 Frame    3
+Fetch  page  105 Frame    3
+Pin    Page  105 Frame    3 Pin Count  1
+Unpin  Page    9 Frame   21 Pin Count  0
+Unpin  Page   99 Frame   28 Pin Count  0
+Unpin  Page   97 Frame   25 Pin Count  0
+Unpin  Page   96 Frame   24 Pin Count  0
+Unpin  Page  100 Frame   29 Pin Count  0
+Unpin  Page   98 Frame   26 Pin Count  0
+Evict  Page    6 Frame    4
+Fetch  page  106 Frame    4
+Pin    Page  106 Frame    4 Pin Count  1
+Evict  Page   80 Frame    5
+Fetch  page  107 Frame    5
+Pin    Page  107 Frame    5 Pin Count  1
+Evict  Page   81 Frame    6
+Fetch  page  108 Frame    6
+Pin    Page  108 Frame    6 Pin Count  1
+Unpin  Page   10 Frame   27 Pin Count  0
+Unpin  Page  101 Frame   30 Pin Count  0
+Unpin  Page  102 Frame   31 Pin Count  0
+Unpin  Page  103 Frame    0 Pin Count  0
+Evict  Page   82 Frame    7
+Fetch  page  109 Frame    7
+Pin    Page  109 Frame    7 Pin Count  1
+Evict  Page   83 Frame    8
+Fetch  page   12 Frame    8
+Pin    Page   12 Frame    8 Pin Count  1
+Evict  Page   84 Frame    9
+Fetch  page  110 Frame    9
+Pin    Page  110 Frame    9 Pin Count  1
+Evict  Page    7 Frame   10
+Fetch  page  111 Frame   10
+Pin    Page  111 Frame   10 Pin Count  1
+Unpin  Page  107 Frame    5 Pin Count  0
+Unpin  Page  104 Frame    1 Pin Count  0
+Unpin  Page  105 Frame    3 Pin Count  0
+Evict  Page   85 Frame   11
+Fetch  page  112 Frame   11
+Pin    Page  112 Frame   11 Pin Count  1
+Evict  Page   86 Frame   12
+Fetch  page  113 Frame   12
+Pin    Page  113 Frame   12 Pin Count  1
+Evict  Page   87 Frame   13
+Fetch  page  114 Frame   13
+Pin    Page  114 Frame   13 Pin Count  1
+Evict  Page   88 Frame   14
+Fetch  page   13 Frame   14
+Pin    Page   13 Frame   14 Pin Count  1
+Evict  Page   89 Frame   15
+Fetch  page  115 Frame   15
+Pin    Page  115 Frame   15 Pin Count  1
+Unpin  Page  108 Frame    6 Pin Count  0
+Unpin  Page  109 Frame    7 Pin Count  0
+Unpin  Page   11 Frame    2 Pin Count  0
+Unpin  Page  110 Frame    9 Pin Count  0
+Unpin  Page  106 Frame    4 Pin Count  0
+Evict  Page    8 Frame   16
+Fetch  page  116 Frame   16
+Pin    Page  116 Frame   16 Pin Count  1
+Evict  Page   90 Frame   17
+Fetch  page  117 Frame   17
+Pin    Page  117 Frame   17 Pin Count  1
+Evict  Page   91 Frame   18
+Fetch  page  118 Frame   18
+Pin    Page  118 Frame   18 Pin Count  1
+Unpin  Page  112 Frame   11 Pin Count  0
+Unpin  Page  113 Frame   12 Pin Count  0
+Unpin  Page  111 Frame   10 Pin Count  0
+Unpin  Page   12 Frame    8 Pin Count  0
+Evict  Page   92 Frame   19
+Fetch  page  119 Frame   19
+Pin    Page  119 Frame   19 Pin Count  1
+Evict  Page   93 Frame   20
+Fetch  page   14 Frame   20
+Pin    Page   14 Frame   20 Pin Count  1
+Evict  Page    9 Frame   21
+Fetch  page  120 Frame   21
+Pin    Page  120 Frame   21 Pin Count  1
+Evict  Page   94 Frame   22
+Fetch  page  121 Frame   22
+Pin    Page  121 Frame   22 Pin Count  1
+Unpin  Page  117 Frame   17 Pin Count  0
+Unpin  Page  116 Frame   16 Pin Count  0
+Unpin  Page  115 Frame   15 Pin Count  0
+Unpin  Page  114 Frame   13 Pin Count  0
+Evict  Page   95 Frame   23
+Fetch  page  122 Frame   23
+Pin    Page  122 Frame   23 Pin Count  1
+Evict  Page   96 Frame   24
+Fetch  page  123 Frame   24
+Pin    Page  123 Frame   24 Pin Count  1
+Evict  Page   97 Frame   25
+Fetch  page  124 Frame   25
+Pin    Page  124 Frame   25 Pin Count  1
+Evict  Page   98 Frame   26
+Fetch  page  125 Frame   26
+Pin    Page  125 Frame   26 Pin Count  1
+Evict  Page   10 Frame   27
+Fetch  page   15 Frame   27
+Pin    Page   15 Frame   27 Pin Count  1
+Evict  Page   99 Frame   28
+Fetch  page  126 Frame   28
+Pin    Page  126 Frame   28 Pin Count  1
+Evict  Page  100 Frame   29
+Fetch  page  127 Frame   29
+Pin    Page  127 Frame   29 Pin Count  1
+Unpin  Page  121 Frame   22 Pin Count  0
+Unpin  Page   13 Frame   14 Pin Count  0
+Unpin  Page  122 Frame   23 Pin Count  0
+Unpin  Page  119 Frame   19 Pin Count  0
+Unpin  Page  120 Frame   21 Pin Count  0
+Unpin  Page  118 Frame   18 Pin Count  0
+Evict  Page  101 Frame   30
+Fetch  page  128 Frame   30
+Pin    Page  128 Frame   30 Pin Count  1
+Evict  Page  102 Frame   31
+Fetch  page  129 Frame   31
+Pin    Page  129 Frame   31 Pin Count  1
+Unpin  Page  126 Frame   28 Pin Count  0
+Unpin  Page  124 Frame   25 Pin Count  0
+Unpin  Page  125 Frame   26 Pin Count  0
+Unpin  Page  123 Frame   24 Pin Count  0
+Unpin  Page   14 Frame   20 Pin Count  0
+Evict  Page  103 Frame    0
+Fetch  page  130 Frame    0
+Pin    Page  130 Frame    0 Pin Count  1
+Evict  Page  104 Frame    1
+Fetch  page   16 Frame    1
+Pin    Page   16 Frame    1 Pin Count  1
+Evict  Page   11 Frame    2
+Fetch  page  131 Frame    2
+Pin    Page  131 Frame    2 Pin Count  1
+Evict  Page  105 Frame    3
+Fetch  page  132 Frame    3
+Pin    Page  132 Frame    3 Pin Count  1
+Unpin  Page  127 Frame   29 Pin Count  0
+Unpin  Page  128 Frame   30 Pin Count  0
+Evict  Page  106 Frame    4
+Fetch  page  133 Frame    4
+Pin    Page  133 Frame    4 Pin Count  1
+Evict  Page  107 Frame    5
+Fetch  page  134 Frame    5
+Pin    Page  134 Frame    5 Pin Count  1
+Evict  Page  108 Frame    6
+Fetch  page  135 Frame    6
+Pin    Page  135 Frame    6 Pin Count  1
+Evict  Page  109 Frame    7
+Fetch  page   17 Frame    7
+Pin    Page   17 Frame    7 Pin Count  1
+Evict  Page   12 Frame    8
+Fetch  page  136 Frame    8
+Pin    Page  136 Frame    8 Pin Count  1
+Unpin  Page  129 Frame   31 Pin Count  0
+Unpin  Page   15 Frame   27 Pin Count  0
+Unpin  Page  130 Frame    0 Pin Count  0
+Evict  Page  110 Frame    9
+Fetch  page  137 Frame    9
+Pin    Page  137 Frame    9 Pin Count  1
+Evict  Page  111 Frame   10
+Fetch  page  138 Frame   10
+Pin    Page  138 Frame   10 Pin Count  1
+Evict  Page  112 Frame   11
+Fetch  page  139 Frame   11
+Pin    Page  139 Frame   11 Pin Count  1
+Unpin  Page  131 Frame    2 Pin Count  0
+Unpin  Page  132 Frame    3 Pin Count  0
+Unpin  Page  133 Frame    4 Pin Count  0
+Unpin  Page  134 Frame    5 Pin Count  0
+Unpin  Page   16 Frame    1 Pin Count  0
+Evict  Page  113 Frame   12
+Fetch  page  140 Frame   12
+Pin    Page  140 Frame   12 Pin Count  1
+Evict  Page  114 Frame   13
+Fetch  page  141 Frame   13
+Pin    Page  141 Frame   13 Pin Count  1
+Evict  Page   13 Frame   14
+Fetch  page   18 Frame   14
+Pin    Page   18 Frame   14 Pin Count  1
+Evict  Page  115 Frame   15
+Fetch  page  142 Frame   15
+Pin    Page  142 Frame   15 Pin Count  1
+Unpin  Page  136 Frame    8 Pin Count  0
+Unpin  Page  137 Frame    9 Pin Count  0
+Unpin  Page  135 Frame    6 Pin Count  0
+Evict  Page  116 Frame   16
+Fetch  page  143 Frame   16
+Pin    Page  143 Frame   16 Pin Count  1
+Evict  Page  117 Frame   17
+Fetch  page  144 Frame   17
+Pin    Page  144 Frame   17 Pin Count  1
+Evict  Page  118 Frame   18
+Fetch  page  145 Frame   18
+Pin    Page  145 Frame   18 Pin Count  1
+Evict  Page  119 Frame   19
+Fetch  page  146 Frame   19
+Pin    Page  146 Frame   19 Pin Count  1
+Evict  Page   14 Frame   20
+Fetch  page   19 Frame   20
+Pin    Page   19 Frame   20 Pin Count  1
+Evict  Page  120 Frame   21
+Fetch  page  147 Frame   21
+Pin    Page  147 Frame   21 Pin Count  1
+Evict  Page  121 Frame   22
+Fetch  page  148 Frame   22
+Pin    Page  148 Frame   22 Pin Count  1
+Unpin  Page  138 Frame   10 Pin Count  0
+Unpin  Page  139 Frame   11 Pin Count  0
+Unpin  Page  141 Frame   13 Pin Count  0
+Unpin  Page   17 Frame    7 Pin Count  0
+Unpin  Page  140 Frame   12 Pin Count  0
+Evict  Page  122 Frame   23
+Fetch  page  149 Frame   23
+Pin    Page  149 Frame   23 Pin Count  1
+Evict  Page  123 Frame   24
+Fetch  page  150 Frame   24
+Pin    Page  150 Frame   24 Pin Count  1
+Evict  Page  124 Frame   25
+Fetch  page  151 Frame   25
+Pin    Page  151 Frame   25 Pin Count  1
+Unpin  Page  143 Frame   16 Pin Count  0
+Unpin  Page  142 Frame   15 Pin Count  0
+Evict  Page  125 Frame   26
+Unpin  Page  145 Frame   18 Pin Count  0
+Fetch  page   20 Frame   26
+Unpin  Page  146 Frame   19 Pin Count  0
+Unpin  Page   18 Frame   14 Pin Count  0
+Unpin  Page  144 Frame   17 Pin Count  0
+Pin    Page   20 Frame   26 Pin Count  1
+Evict  Page   15 Frame   27
+Fetch  page  152 Frame   27
+Pin    Page  152 Frame   27 Pin Count  1
+Evict  Page  126 Frame   28
+Fetch  page  153 Frame   28
+Pin    Page  153 Frame   28 Pin Count  1
+Evict  Page  127 Frame   29
+Fetch  page  154 Frame   29
+Pin    Page  154 Frame   29 Pin Count  1
+Unpin  Page   19 Frame   20 Pin Count  0
+Unpin  Page  148 Frame   22 Pin Count  0
+Unpin  Page  147 Frame   21 Pin Count  0
+Unpin  Page  149 Frame   23 Pin Count  0
+Unpin  Page  150 Frame   24 Pin Count  0
+Evict  Page  128 Frame   30
+Fetch  page  155 Frame   30
+Pin    Page  155 Frame   30 Pin Count  1
+Evict  Page  129 Frame   31
+Fetch  page   21 Frame   31
+Pin    Page   21 Frame   31 Pin Count  1
+Evict  Page  130 Frame    0
+Fetch  page  156 Frame    0
+Pin    Page  156 Frame    0 Pin Count  1
+Evict  Page   16 Frame    1
+Fetch  page  157 Frame    1
+Pin    Page  157 Frame    1 Pin Count  1
+Unpin  Page  151 Frame   25 Pin Count  0
+Unpin  Page  152 Frame   27 Pin Count  0
+Evict  Page  131 Frame    2
+Fetch  page  158 Frame    2
+Pin    Page  158 Frame    2 Pin Count  1
+Evict  Page  132 Frame    3
+Fetch  page  159 Frame    3
+Pin    Page  159 Frame    3 Pin Count  1
+Evict  Page  133 Frame    4
+Fetch  page  160 Frame    4
+Pin    Page  160 Frame    4 Pin Count  1
+Evict  Page  134 Frame    5
+Fetch  page   22 Frame    5
+Pin    Page   22 Frame    5 Pin Count  1
+Evict  Page  135 Frame    6
+Fetch  page  161 Frame    6
+Pin    Page  161 Frame    6 Pin Count  1
+Evict  Page   17 Frame    7
+Fetch  page  162 Frame    7
+Pin    Page  162 Frame    7 Pin Count  1
+Evict  Page  136 Frame    8
+Fetch  page  163 Frame    8
+Pin    Page  163 Frame    8 Pin Count  1
+Evict  Page  137 Frame    9
+Fetch  page  164 Frame    9
+Pin    Page  164 Frame    9 Pin Count  1
+Evict  Page  138 Frame   10
+Fetch  page  165 Frame   10
+Pin    Page  165 Frame   10 Pin Count  1
+Unpin  Page  154 Frame   29 Pin Count  0
+Unpin  Page  153 Frame   28 Pin Count  0
+Unpin  Page  155 Frame   30 Pin Count  0
+Unpin  Page   20 Frame   26 Pin Count  0
+Unpin  Page  156 Frame    0 Pin Count  0
+Evict  Page  139 Frame   11
+Fetch  page  166 Frame   11
+Pin    Page  166 Frame   11 Pin Count  1
+Evict  Page  140 Frame   12
+Fetch  page  167 Frame   12
+Pin    Page  167 Frame   12 Pin Count  1
+Evict  Page  141 Frame   13
+Fetch  page  168 Frame   13
+Pin    Page  168 Frame   13 Pin Count  1
+Evict  Page   18 Frame   14
+Fetch  page   23 Frame   14
+Pin    Page   23 Frame   14 Pin Count  1
+Evict  Page  142 Frame   15
+Fetch  page  169 Frame   15
+Pin    Page  169 Frame   15 Pin Count  1
+Evict  Page  143 Frame   16
+Fetch  page  170 Frame   16
+Pin    Page  170 Frame   16 Pin Count  1
+Evict  Page  144 Frame   17
+Fetch  page  171 Frame   17
+Pin    Page  171 Frame   17 Pin Count  1
+Evict  Page  145 Frame   18
+Fetch  page  172 Frame   18
+Pin    Page  172 Frame   18 Pin Count  1
+Unpin  Page   21 Frame   31 Pin Count  0
+Unpin  Page  162 Frame    7 Pin Count  0
+Unpin  Page  161 Frame    6 Pin Count  0
+Unpin  Page  157 Frame    1 Pin Count  0
+Unpin  Page  160 Frame    4 Pin Count  0
+Unpin  Page  163 Frame    8 Pin Count  0
+Evict  Page  146 Frame   19
+Unpin  Page  159 Frame    3 Pin Count  0
+Fetch  page  173 Frame   19
+Pin    Page  173 Frame   19 Pin Count  1
+Unpin  Page  164 Frame    9 Pin Count  0
+Unpin  Page  158 Frame    2 Pin Count  0
+Evict  Page   19 Frame   20
+Fetch  page  174 Frame   20
+Pin    Page  174 Frame   20 Pin Count  1
+Evict  Page  147 Frame   21
+Fetch  page   24 Frame   21
+Pin    Page   24 Frame   21 Pin Count  1
+Evict  Page  148 Frame   22
+Fetch  page  175 Frame   22
+Pin    Page  175 Frame   22 Pin Count  1
+Evict  Page  149 Frame   23
+Fetch  page  176 Frame   23
+Pin    Page  176 Frame   23 Pin Count  1
+Evict  Page  150 Frame   24
+Fetch  page  177 Frame   24
+Pin    Page  177 Frame   24 Pin Count  1
+Evict  Page  151 Frame   25
+Fetch  page  178 Frame   25
+Pin    Page  178 Frame   25 Pin Count  1
+Evict  Page   20 Frame   26
+Fetch  page   25 Frame   26
+Pin    Page   25 Frame   26 Pin Count  1
+Evict  Page  152 Frame   27
+Fetch  page  179 Frame   27
+Pin    Page  179 Frame   27 Pin Count  1
+Evict  Page  153 Frame   28
+Fetch  page  180 Frame   28
+Pin    Page  180 Frame   28 Pin Count  1
+Evict  Page  154 Frame   29
+Fetch  page  181 Frame   29
+Pin    Page  181 Frame   29 Pin Count  1
+Evict  Page  155 Frame   30
+Fetch  page  182 Frame   30
+Pin    Page  182 Frame   30 Pin Count  1
+Evict  Page   21 Frame   31
+Fetch  page  183 Frame   31
+Pin    Page  183 Frame   31 Pin Count  1
+Evict  Page  156 Frame    0
+Fetch  page  184 Frame    0
+Pin    Page  184 Frame    0 Pin Count  1
+Evict  Page  157 Frame    1
+Fetch  page  185 Frame    1
+Pin    Page  185 Frame    1 Pin Count  1
+Evict  Page  158 Frame    2
+Fetch  page   26 Frame    2
+Pin    Page   26 Frame    2 Pin Count  1
+Evict  Page  159 Frame    3
+Fetch  page  186 Frame    3
+Pin    Page  186 Frame    3 Pin Count  1
+Unpin  Page  166 Frame   11 Pin Count  0
+Unpin  Page  170 Frame   16 Pin Count  0
+Unpin  Page  169 Frame   15 Pin Count  0
+Unpin  Page  168 Frame   13 Pin Count  0
+Unpin  Page   22 Frame    5 Pin Count  0
+Unpin  Page  165 Frame   10 Pin Count  0
+Unpin  Page  167 Frame   12 Pin Count  0
+Unpin  Page  171 Frame   17 Pin Count  0
+Unpin  Page  172 Frame   18 Pin Count  0
+Evict  Page  160 Frame    4
+Fetch  page  187 Frame    4
+Pin    Page  187 Frame    4 Pin Count  1
+Evict  Page   22 Frame    5
+Fetch  page  188 Frame    5
+Pin    Page  188 Frame    5 Pin Count  1
+Evict  Page  161 Frame    6
+Fetch  page  189 Frame    6
+Pin    Page  189 Frame    6 Pin Count  1
+Evict  Page  162 Frame    7
+Fetch  page   27 Frame    7
+Pin    Page   27 Frame    7 Pin Count  1
+Evict  Page  163 Frame    8
+Fetch  page  190 Frame    8
+Pin    Page  190 Frame    8 Pin Count  1
+Evict  Page  164 Frame    9
+Fetch  page  191 Frame    9
+Pin    Page  191 Frame    9 Pin Count  1
+Evict  Page  165 Frame   10
+Fetch  page  192 Frame   10
+Pin    Page  192 Frame   10 Pin Count  1
+Evict  Page  166 Frame   11
+Fetch  page  193 Frame   11
+Pin    Page  193 Frame   11 Pin Count  1
+Unpin  Page   24 Frame   21 Pin Count  0
+Unpin  Page  177 Frame   24 Pin Count  0
+Unpin  Page  174 Frame   20 Pin Count  0
+Unpin  Page  179 Frame   27 Pin Count  0
+Unpin  Page  178 Frame   25 Pin Count  0
+Unpin  Page   23 Frame   14 Pin Count  0
+Unpin  Page  183 Frame   31 Pin Count  0
+Unpin  Page  185 Frame    1 Pin Count  0
+Unpin  Page  181 Frame   29 Pin Count  0
+Unpin  Page  173 Frame   19 Pin Count  0
+Unpin  Page  176 Frame   23 Pin Count  0
+Unpin  Page  175 Frame   22 Pin Count  0
+Unpin  Page  180 Frame   28 Pin Count  0
+Unpin  Page  182 Frame   30 Pin Count  0
+Unpin  Page   25 Frame   26 Pin Count  0
+Evict  Page  167 Frame   12
+Fetch  page  194 Frame   12
+Pin    Page  194 Frame   12 Pin Count  1
+Evict  Page  168 Frame   13
+Fetch  page   28 Frame   13
+Pin    Page   28 Frame   13 Pin Count  1
+Evict  Page   23 Frame   14
+Fetch  page  195 Frame   14
+Pin    Page  195 Frame   14 Pin Count  1
+Evict  Page  169 Frame   15
+Fetch  page  196 Frame   15
+Pin    Page  196 Frame   15 Pin Count  1
+Evict  Page  170 Frame   16
+Fetch  page  197 Frame   16
+Pin    Page  197 Frame   16 Pin Count  1
+Evict  Page  171 Frame   17
+Fetch  page  198 Frame   17
+Pin    Page  198 Frame   17 Pin Count  1
+Evict  Page  172 Frame   18
+Fetch  page  199 Frame   18
+Pin    Page  199 Frame   18 Pin Count  1
+Evict  Page  173 Frame   19
+Fetch  page   29 Frame   19
+Pin    Page   29 Frame   19 Pin Count  1
+Evict  Page  174 Frame   20
+Fetch  page  200 Frame   20
+Pin    Page  200 Frame   20 Pin Count  1
+Evict  Page   24 Frame   21
+Fetch  page  201 Frame   21
+Pin    Page  201 Frame   21 Pin Count  1
+Evict  Page  175 Frame   22
+Fetch  page  202 Frame   22
+Pin    Page  202 Frame   22 Pin Count  1
+Evict  Page  176 Frame   23
+Fetch  page  203 Frame   23
+Pin    Page  203 Frame   23 Pin Count  1
+Evict  Page  177 Frame   24
+Fetch  page  204 Frame   24
+Pin    Page  204 Frame   24 Pin Count  1
+Evict  Page  178 Frame   25
+Fetch  page   30 Frame   25
+Pin    Page   30 Frame   25 Pin Count  1
+Unpin  Page  190 Frame    8 Pin Count  0
+Unpin  Page  184 Frame    0 Pin Count  0
+Unpin  Page   26 Frame    2 Pin Count  0
+Unpin  Page  192 Frame   10 Pin Count  0
+Unpin  Page  187 Frame    4 Pin Count  0
+Unpin  Page  189 Frame    6 Pin Count  0
+Unpin  Page  188 Frame    5 Pin Count  0
+Unpin  Page  186 Frame    3 Pin Count  0
+Evict  Page   25 Frame   26
+Fetch  page  205 Frame   26
+Pin    Page  205 Frame   26 Pin Count  1
+Evict  Page  179 Frame   27
+Fetch  page  206 Frame   27
+Pin    Page  206 Frame   27 Pin Count  1
+Evict  Page  180 Frame   28
+Fetch  page  207 Frame   28
+Pin    Page  207 Frame   28 Pin Count  1
+Evict  Page  181 Frame   29
+Fetch  page  208 Frame   29
+Pin    Page  208 Frame   29 Pin Count  1
+Evict  Page  182 Frame   30
+Fetch  page  209 Frame   30
+Pin    Page  209 Frame   30 Pin Count  1
+Evict  Page  183 Frame   31
+Fetch  page  210 Frame   31
+Pin    Page  210 Frame   31 Pin Count  1
+Evict  Page  184 Frame    0
+Fetch  page  211 Frame    0
+Pin    Page  211 Frame    0 Pin Count  1
+Evict  Page  185 Frame    1
+Fetch  page   31 Frame    1
+Pin    Page   31 Frame    1 Pin Count  1
+Unpin  Page  199 Frame   18 Pin Count  0
+Unpin  Page  194 Frame   12 Pin Count  0
+Unpin  Page  197 Frame   16 Pin Count  0
+Unpin  Page  191 Frame    9 Pin Count  0
+Unpin  Page  198 Frame   17 Pin Count  0
+Unpin  Page  202 Frame   22 Pin Count  0
+Unpin  Page   27 Frame    7 Pin Count  0
+Unpin  Page  200 Frame   20 Pin Count  0
+Unpin  Page   28 Frame   13 Pin Count  0
+Unpin  Page  196 Frame   15 Pin Count  0
+Unpin  Page  195 Frame   14 Pin Count  0
+Unpin  Page  203 Frame   23 Pin Count  0
+Unpin  Page   29 Frame   19 Pin Count  0
+Unpin  Page  193 Frame   11 Pin Count  0
+Evict  Page   26 Frame    2
+Fetch  page  212 Frame    2
+Pin    Page  212 Frame    2 Pin Count  1
+Evict  Page  186 Frame    3
+Fetch  page  213 Frame    3
+Pin    Page  213 Frame    3 Pin Count  1
+Evict  Page  187 Frame    4
+Fetch  page  214 Frame    4
+Pin    Page  214 Frame    4 Pin Count  1
+Evict  Page  188 Frame    5
+Fetch  page  215 Frame    5
+Pin    Page  215 Frame    5 Pin Count  1
+Evict  Page  189 Frame    6
+Fetch  page  216 Frame    6
+Pin    Page  216 Frame    6 Pin Count  1
+Evict  Page   27 Frame    7
+Fetch  page  217 Frame    7
+Pin    Page  217 Frame    7 Pin Count  1
+Evict  Page  190 Frame    8
+Fetch  page  218 Frame    8
+Pin    Page  218 Frame    8 Pin Count  1
+Evict  Page  191 Frame    9
+Fetch  page   32 Frame    9
+Pin    Page   32 Frame    9 Pin Count  1
+Evict  Page  192 Frame   10
+Fetch  page  219 Frame   10
+Pin    Page  219 Frame   10 Pin Count  1
+Unpin  Page   30 Frame   25 Pin Count  0
+Unpin  Page  204 Frame   24 Pin Count  0
+Unpin  Page  208 Frame   29 Pin Count  0
+Unpin  Page  205 Frame   26 Pin Count  0
+Unpin  Page  201 Frame   21 Pin Count  0
+Unpin  Page  206 Frame   27 Pin Count  0
+Unpin  Page  210 Frame   31 Pin Count  0
+Evict  Page  193 Frame   11
+Fetch  page  220 Frame   11
+Pin    Page  220 Frame   11 Pin Count  1
+Evict  Page  194 Frame   12
+Fetch  page  221 Frame   12
+Pin    Page  221 Frame   12 Pin Count  1
+Evict  Page   28 Frame   13
+Fetch  page  222 Frame   13
+Pin    Page  222 Frame   13 Pin Count  1
+Evict  Page  195 Frame   14
+Fetch  page  223 Frame   14
+Pin    Page  223 Frame   14 Pin Count  1
+Evict  Page  196 Frame   15
+Fetch  page   33 Frame   15
+Pin    Page   33 Frame   15 Pin Count  1
+Evict  Page  197 Frame   16
+Fetch  page  224 Frame   16
+Pin    Page  224 Frame   16 Pin Count  1
+Evict  Page  198 Frame   17
+Fetch  page  225 Frame   17
+Pin    Page  225 Frame   17 Pin Count  1
+Evict  Page  199 Frame   18
+Fetch  page  226 Frame   18
+Pin    Page  226 Frame   18 Pin Count  1
+Evict  Page   29 Frame   19
+Fetch  page   34 Frame   19
+Pin    Page   34 Frame   19 Pin Count  1
+Evict  Page  200 Frame   20
+Fetch  page  227 Frame   20
+Pin    Page  227 Frame   20 Pin Count  1
+Evict  Page  201 Frame   21
+Fetch  page  228 Frame   21
+Pin    Page  228 Frame   21 Pin Count  1
+Unpin  Page  207 Frame   28 Pin Count  0
+Unpin  Page  214 Frame    4 Pin Count  0
+Unpin  Page  212 Frame    2 Pin Count  0
+Unpin  Page  211 Frame    0 Pin Count  0
+Unpin  Page  215 Frame    5 Pin Count  0
+Unpin  Page  213 Frame    3 Pin Count  0
+Unpin  Page  216 Frame    6 Pin Count  0
+Unpin  Page  209 Frame   30 Pin Count  0
+Unpin  Page  217 Frame    7 Pin Count  0
+Evict  Page  202 Frame   22
+Fetch  page  229 Frame   22
+Pin    Page  229 Frame   22 Pin Count  1
+Evict  Page  203 Frame   23
+Fetch  page  230 Frame   23
+Pin    Page  230 Frame   23 Pin Count  1
+Evict  Page  204 Frame   24
+Fetch  page   35 Frame   24
+Pin    Page   35 Frame   24 Pin Count  1
+Evict  Page   30 Frame   25
+Fetch  page  231 Frame   25
+Pin    Page  231 Frame   25 Pin Count  1
+Evict  Page  205 Frame   26
+Fetch  page  232 Frame   26
+Pin    Page  232 Frame   26 Pin Count  1
+Evict  Page  206 Frame   27
+Fetch  page  233 Frame   27
+Pin    Page  233 Frame   27 Pin Count  1
+Evict  Page  207 Frame   28
+Fetch  page  234 Frame   28
+Pin    Page  234 Frame   28 Pin Count  1
+Evict  Page  208 Frame   29
+Fetch  page  235 Frame   29
+Pin    Page  235 Frame   29 Pin Count  1
+Evict  Page  209 Frame   30
+Fetch  page   36 Frame   30
+Pin    Page   36 Frame   30 Pin Count  1
+Evict  Page  210 Frame   31
+Fetch  page  236 Frame   31
+Pin    Page  236 Frame   31 Pin Count  1
+Evict  Page  211 Frame    0
+Fetch  page  237 Frame    0
+Pin    Page  237 Frame    0 Pin Count  1
+Evict  Page  212 Frame    2
+Fetch  page  238 Frame    2
+Pin    Page  238 Frame    2 Pin Count  1
+Evict  Page  213 Frame    3
+Fetch  page  239 Frame    3
+Pin    Page  239 Frame    3 Pin Count  1
+Evict  Page  214 Frame    4
+Fetch  page  240 Frame    4
+Pin    Page  240 Frame    4 Pin Count  1
+Evict  Page  215 Frame    5
+Fetch  page  241 Frame    5
+Pin    Page  241 Frame    5 Pin Count  1
+Evict  Page  216 Frame    6
+Fetch  page   37 Frame    6
+Pin    Page   37 Frame    6 Pin Count  1
+Evict  Page  217 Frame    7
+Fetch  page  242 Frame    7
+Pin    Page  242 Frame    7 Pin Count  1
+Unpin  Page   31 Frame    1 Pin Count  0
+Unpin  Page  218 Frame    8 Pin Count  0
+Unpin  Page  227 Frame   20 Pin Count  0
+Unpin  Page   33 Frame   15 Pin Count  0
+Unpin  Page  221 Frame   12 Pin Count  0
+Unpin  Page  222 Frame   13 Pin Count  0
+Unpin  Page  220 Frame   11 Pin Count  0
+Unpin  Page  223 Frame   14 Pin Count  0
+Unpin  Page  224 Frame   16 Pin Count  0
+Unpin  Page  225 Frame   17 Pin Count  0
+Unpin  Page  226 Frame   18 Pin Count  0
+Unpin  Page  219 Frame   10 Pin Count  0
+Unpin  Page   32 Frame    9 Pin Count  0
+Evict  Page  218 Frame    8
+Unpin  Page  231 Frame   25 Pin Count  0
+Fetch  page  243 Frame    8
+Unpin  Page  228 Frame   21 Pin Count  0
+Pin    Page  243 Frame    8 Pin Count  1
+Evict  Page   32 Frame    9
+Fetch  page  244 Frame    9
+Pin    Page  244 Frame    9 Pin Count  1
+Evict  Page  219 Frame   10
+Fetch  page  245 Frame   10
+Pin    Page  245 Frame   10 Pin Count  1
+Evict  Page  220 Frame   11
+Fetch  page   38 Frame   11
+Pin    Page   38 Frame   11 Pin Count  1
+Evict  Page  221 Frame   12
+Fetch  page  246 Frame   12
+Pin    Page  246 Frame   12 Pin Count  1
+Evict  Page  222 Frame   13
+Fetch  page  247 Frame   13
+Pin    Page  247 Frame   13 Pin Count  1
+Evict  Page  223 Frame   14
+Fetch  page  248 Frame   14
+Pin    Page  248 Frame   14 Pin Count  1
+Evict  Page   33 Frame   15
+Fetch  page  249 Frame   15
+Pin    Page  249 Frame   15 Pin Count  1
+Unpin  Page  230 Frame   23 Pin Count  0
+Unpin  Page   36 Frame   30 Pin Count  0
+Unpin  Page  241 Frame    5 Pin Count  0
+Unpin  Page  233 Frame   27 Pin Count  0
+Unpin  Page  237 Frame    0 Pin Count  0
+Unpin  Page  239 Frame    3 Pin Count  0
+Unpin  Page  236 Frame   31 Pin Count  0
+Unpin  Page  232 Frame   26 Pin Count  0
+Unpin  Page   34 Frame   19 Pin Count  0
+Unpin  Page  234 Frame   28 Pin Count  0
+Unpin  Page  229 Frame   22 Pin Count  0
+Unpin  Page  238 Frame    2 Pin Count  0
+Unpin  Page  235 Frame   29 Pin Count  0
+Unpin  Page   35 Frame   24 Pin Count  0
+Unpin  Page  240 Frame    4 Pin Count  0
+Evict  Page  224 Frame   16
+Fetch  page  250 Frame   16
+Pin    Page  250 Frame   16 Pin Count  1
+Evict  Page  225 Frame   17
+Fetch  page  251 Frame   17
+Pin    Page  251 Frame   17 Pin Count  1
+Evict  Page  226 Frame   18
+Fetch  page   39 Frame   18
+Pin    Page   39 Frame   18 Pin Count  1
+Evict  Page   34 Frame   19
+Fetch  page  252 Frame   19
+Pin    Page  252 Frame   19 Pin Count  1
+Evict  Page  227 Frame   20
+Fetch  page  253 Frame   20
+Pin    Page  253 Frame   20 Pin Count  1
+Evict  Page  228 Frame   21
+Fetch  page  254 Frame   21
+Pin    Page  254 Frame   21 Pin Count  1
+Evict  Page  229 Frame   22
+Fetch  page  255 Frame   22
+Pin    Page  255 Frame   22 Pin Count  1
+Evict  Page  230 Frame   23
+Fetch  page   40 Frame   23
+Pin    Page   40 Frame   23 Pin Count  1
+Unpin  Page   37 Frame    6 Pin Count  0
+Evict  Page   35 Frame   24
+Fetch  page  256 Frame   24
+Pin    Page  256 Frame   24 Pin Count  1
+Evict  Page  231 Frame   25
+Fetch  page  257 Frame   25
+Pin    Page  257 Frame   25 Pin Count  1
+Evict  Page  232 Frame   26
+Fetch  page  258 Frame   26
+Pin    Page  258 Frame   26 Pin Count  1
+Evict  Page  233 Frame   27
+Fetch  page   41 Frame   27
+Pin    Page   41 Frame   27 Pin Count  1
+Evict  Page  234 Frame   28
+Fetch  page  259 Frame   28
+Pin    Page  259 Frame   28 Pin Count  1
+Evict  Page  235 Frame   29
+Fetch  page  260 Frame   29
+Pin    Page  260 Frame   29 Pin Count  1
+Evict  Page   36 Frame   30
+Fetch  page  261 Frame   30
+Pin    Page  261 Frame   30 Pin Count  1
+Evict  Page  236 Frame   31
+Fetch  page  262 Frame   31
+Pin    Page  262 Frame   31 Pin Count  1
+Unpin  Page   38 Frame   11 Pin Count  0
+Unpin  Page  245 Frame   10 Pin Count  0
+Unpin  Page  243 Frame    8 Pin Count  0
+Unpin  Page   39 Frame   18 Pin Count  0
+Unpin  Page  246 Frame   12 Pin Count  0
+Unpin  Page  249 Frame   15 Pin Count  0
+Unpin  Page  247 Frame   13 Pin Count  0
+Evict  Page  237 Frame    0
+Unpin  Page  244 Frame    9 Pin Count  0
+Fetch  page  263 Frame    0
+Pin    Page  263 Frame    0 Pin Count  1
+Unpin  Page  252 Frame   19 Pin Count  0
+Unpin  Page  254 Frame   21 Pin Count  0
+Unpin  Page  250 Frame   16 Pin Count  0
+Unpin  Page  248 Frame   14 Pin Count  0
+Unpin  Page  251 Frame   17 Pin Count  0
+Unpin  Page  242 Frame    7 Pin Count  0
+Evict  Page   31 Frame    1
+Fetch  page   42 Frame    1
+Pin    Page   42 Frame    1 Pin Count  1
+Evict  Page  238 Frame    2
+Fetch  page  264 Frame    2
+Pin    Page  264 Frame    2 Pin Count  1
+Evict  Page  239 Frame    3
+Fetch  page  265 Frame    3
+Pin    Page  265 Frame    3 Pin Count  1
+Evict  Page  240 Frame    4
+Fetch  page  266 Frame    4
+Pin    Page  266 Frame    4 Pin Count  1
+Evict  Page  241 Frame    5
+Fetch  page  267 Frame    5
+Pin    Page  267 Frame    5 Pin Count  1
+Evict  Page   37 Frame    6
+Fetch  page   43 Frame    6
+Pin    Page   43 Frame    6 Pin Count  1
+Evict  Page  242 Frame    7
+Fetch  page  268 Frame    7
+Pin    Page  268 Frame    7 Pin Count  1
+Evict  Page  243 Frame    8
+Fetch  page  269 Frame    8
+Pin    Page  269 Frame    8 Pin Count  1
+Evict  Page  244 Frame    9
+Fetch  page  270 Frame    9
+Pin    Page  270 Frame    9 Pin Count  1
+Unpin  Page  259 Frame   28 Pin Count  0
+Unpin  Page  258 Frame   26 Pin Count  0
+Unpin  Page  253 Frame   20 Pin Count  0
+Evict  Page  245 Frame   10
+Unpin  Page  256 Frame   24 Pin Count  0
+Unpin  Page  257 Frame   25 Pin Count  0
+Unpin  Page  255 Frame   22 Pin Count  0
+Unpin  Page   40 Frame   23 Pin Count  0
+Fetch  page  271 Frame   10
+Pin    Page  271 Frame   10 Pin Count  1
+Evict  Page   38 Frame   11
+Fetch  page   44 Frame   11
+Pin    Page   44 Frame   11 Pin Count  1
+Evict  Page  246 Frame   12
+Fetch  page  272 Frame   12
+Pin    Page  272 Frame   12 Pin Count  1
+Evict  Page  247 Frame   13
+Fetch  page  273 Frame   13
+Pin    Page  273 Frame   13 Pin Count  1
+Evict  Page  248 Frame   14
+Fetch  page  274 Frame   14
+Pin    Page  274 Frame   14 Pin Count  1
+Evict  Page  249 Frame   15
+Fetch  page  275 Frame   15
+Pin    Page  275 Frame   15 Pin Count  1
+Evict  Page  250 Frame   16
+Fetch  page   45 Frame   16
+Pin    Page   45 Frame   16 Pin Count  1
+Evict  Page  251 Frame   17
+Fetch  page  276 Frame   17
+Pin    Page  276 Frame   17 Pin Count  1
+Evict  Page   39 Frame   18
+Fetch  page  277 Frame   18
+Pin    Page  277 Frame   18 Pin Count  1
+Evict  Page  252 Frame   19
+Fetch  page  278 Frame   19
+Pin    Page  278 Frame   19 Pin Count  1
+Unpin  Page  266 Frame    4 Pin Count  0
+Unpin  Page  268 Frame    7 Pin Count  0
+Unpin  Page  265 Frame    3 Pin Count  0
+Unpin  Page  264 Frame    2 Pin Count  0
+Unpin  Page   41 Frame   27 Pin Count  0
+Unpin  Page  261 Frame   30 Pin Count  0
+Unpin  Page  262 Frame   31 Pin Count  0
+Unpin  Page  260 Frame   29 Pin Count  0
+Unpin  Page  269 Frame    8 Pin Count  0
+Unpin  Page  267 Frame    5 Pin Count  0
+Unpin  Page   42 Frame    1 Pin Count  0
+Unpin  Page  263 Frame    0 Pin Count  0
+Evict  Page  253 Frame   20
+Fetch  page  279 Frame   20
+Pin    Page  279 Frame   20 Pin Count  1
+Evict  Page  254 Frame   21
+Fetch  page  280 Frame   21
+Pin    Page  280 Frame   21 Pin Count  1
+Evict  Page  255 Frame   22
+Fetch  page  281 Frame   22
+Pin    Page  281 Frame   22 Pin Count  1
+Evict  Page   40 Frame   23
+Fetch  page   46 Frame   23
+Pin    Page   46 Frame   23 Pin Count  1
+Evict  Page  256 Frame   24
+Fetch  page  282 Frame   24
+Pin    Page  282 Frame   24 Pin Count  1
+Evict  Page  257 Frame   25
+Fetch  page  283 Frame   25
+Pin    Page  283 Frame   25 Pin Count  1
+Evict  Page  258 Frame   26
+Fetch  page  284 Frame   26
+Pin    Page  284 Frame   26 Pin Count  1
+Evict  Page   41 Frame   27
+Fetch  page  285 Frame   27
+Pin    Page  285 Frame   27 Pin Count  1
+Evict  Page  259 Frame   28
+Fetch  page  286 Frame   28
+Pin    Page  286 Frame   28 Pin Count  1
+Evict  Page  260 Frame   29
+Fetch  page   47 Frame   29
+Pin    Page   47 Frame   29 Pin Count  1
+Evict  Page  261 Frame   30
+Fetch  page  287 Frame   30
+Pin    Page  287 Frame   30 Pin Count  1
+Evict  Page  262 Frame   31
+Fetch  page  288 Frame   31
+Pin    Page  288 Frame   31 Pin Count  1
+Evict  Page  263 Frame    0
+Fetch  page  289 Frame    0
+Pin    Page  289 Frame    0 Pin Count  1
+Evict  Page   42 Frame    1
+Fetch  page  290 Frame    1
+Pin    Page  290 Frame    1 Pin Count  1
+Evict  Page  264 Frame    2
+Fetch  page   48 Frame    2
+Pin    Page   48 Frame    2 Pin Count  1
+Evict  Page  265 Frame    3
+Fetch  page  291 Frame    3
+Pin    Page  291 Frame    3 Pin Count  1
+Evict  Page  266 Frame    4
+Fetch  page  292 Frame    4
+Pin    Page  292 Frame    4 Pin Count  1
+Evict  Page  267 Frame    5
+Fetch  page  293 Frame    5
+Pin    Page  293 Frame    5 Pin Count  1
+Evict  Page  268 Frame    7
+Fetch  page  294 Frame    7
+Pin    Page  294 Frame    7 Pin Count  1
+Unpin  Page  278 Frame   19 Pin Count  0
+Unpin  Page  272 Frame   12 Pin Count  0
+Unpin  Page   45 Frame   16 Pin Count  0
+Unpin  Page  281 Frame   22 Pin Count  0
+Unpin  Page  274 Frame   14 Pin Count  0
+Unpin  Page  276 Frame   17 Pin Count  0
+Unpin  Page   44 Frame   11 Pin Count  0
+Unpin  Page  279 Frame   20 Pin Count  0
+Unpin  Page  277 Frame   18 Pin Count  0
+Unpin  Page  273 Frame   13 Pin Count  0
+Unpin  Page   43 Frame    6 Pin Count  0
+Unpin  Page  270 Frame    9 Pin Count  0
+Unpin  Page  275 Frame   15 Pin Count  0
+Unpin  Page  271 Frame   10 Pin Count  0
+Evict  Page  269 Frame    8
+Fetch  page  295 Frame    8
+Pin    Page  295 Frame    8 Pin Count  1
+Evict  Page  270 Frame    9
+Fetch  page   49 Frame    9
+Pin    Page   49 Frame    9 Pin Count  1
+Evict  Page  271 Frame   10
+Fetch  page  296 Frame   10
+Pin    Page  296 Frame   10 Pin Count  1
+Evict  Page   44 Frame   11
+Fetch  page  297 Frame   11
+Pin    Page  297 Frame   11 Pin Count  1
+Evict  Page  272 Frame   12
+Fetch  page  298 Frame   12
+Pin    Page  298 Frame   12 Pin Count  1
+Evict  Page  273 Frame   13
+Fetch  page  299 Frame   13
+Pin    Page  299 Frame   13 Pin Count  1
+Unpin  Page  286 Frame   28 Pin Count  0
+Unpin  Page  285 Frame   27 Pin Count  0
+Unpin  Page  287 Frame   30 Pin Count  0
+Unpin  Page  282 Frame   24 Pin Count  0
+Unpin  Page  288 Frame   31 Pin Count  0
+Unpin  Page  284 Frame   26 Pin Count  0
+Unpin  Page   46 Frame   23 Pin Count  0
+Unpin  Page  289 Frame    0 Pin Count  0
+Unpin  Page  283 Frame   25 Pin Count  0
+Unpin  Page  290 Frame    1 Pin Count  0
+Unpin  Page  280 Frame   21 Pin Count  0
+Unpin  Page  291 Frame    3 Pin Count  0
+Unpin  Page   47 Frame   29 Pin Count  0
+Unpin  Page  292 Frame    4 Pin Count  0
