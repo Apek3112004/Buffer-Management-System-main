@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef _REPLACER_HPP_
 #define _REPLACER_HPP_
 
@@ -13,39 +11,29 @@
 template <size_t N>
 struct Replacer
 {
-	std::array<Frame, N> *frames{nullptr}; // pointer to the frames
+    std::array<Frame, N>* frames;
 
-	Replacer() = default;
-	virtual ~Replacer() = default;
+    Replacer()
+    {
+        frames = NULL;
+    }
 
-	/**
-	 * @brief Remove the victim frame as defined by the replacement policy.
-	 * @return the id of the victim frame, std::nullopt if no victim was found
-	 */
-	virtual auto victim() -> std::optional<frame_id_t> = 0;
+    virtual ~Replacer() {}
 
-	/**
-	 * @brief Pins a frame, indicating that it should not be victimized until it is unpinned.
-	 * @param frame_id the id of the frame to pin
-	 */
-	virtual auto pin(frame_id_t frame_id) -> void = 0;
+    // Remove the victim frame as defined by the replacement policy.
+    virtual std::optional<frame_id_t> victim() = 0;
 
-	/**
-	 * @brief Unpins a frame, indicating that it can now be victimized.
-	 * @param frame_id the id of the frame to unpin
-	 */
-	virtual auto unpin(frame_id_t frame_id) -> void = 0;
+    // Pin a frame (should not be victimized).
+    virtual void pin(frame_id_t frame_id) = 0;
+
+    // Unpin a frame (can be victimized).
+    virtual void unpin(frame_id_t frame_id) = 0;
 };
 
-template <size_t N>
-using PReplacer = Replacer<N> *;
-template <size_t N>
-using CPReplacer = const Replacer<N> *;
-template <size_t N>
-using RReplacer = Replacer<N> &;
-template <size_t N>
-using CRReplacer = const Replacer<N> &;
-
-#include "Replacer.hpp"
+// Aliases
+template <size_t N> using PReplacer  = Replacer<N>*;
+template <size_t N> using CPReplacer = const Replacer<N>*;
+template <size_t N> using RReplacer  = Replacer<N>&;
+template <size_t N> using CRReplacer = const Replacer<N>&;
 
 #endif // _REPLACER_HPP_

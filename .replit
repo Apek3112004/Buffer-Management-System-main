@@ -1,65 +1,48 @@
 modules = ["cpp-clang14"]
+
+# Always use the Makefile
 compile = "make"
-run = "g++ -std=c++20 -Iinclude src/table.cpp -o table && ./table"
+run = "make run-select"
 
 [nix]
 channel = "stable-24_05"
 
 [deployment]
 build = ["sh", "-c", "make"]
-run = ["sh", "-c", "g++ -std=c++20 -Iinclude src/table.cpp -o table && ./table"]
+run   = ["sh", "-c", "make run-select"]
 
 [workflows]
 runButton = "Run Select"
 
+# Build everything and run what you want via make targets
 [[workflows.workflow]]
-name = "Build and Run"
-author = 18972025
-mode = "parallel"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "make table"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "./bin/table"
-
-[[workflows.workflow]]
-name = "Build and Run Join"
+name = "Build All"
 author = 18972025
 mode = "sequential"
+  [[workflows.workflow.tasks]]
+  task = "shell.exec"
+  args = "make"
 
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "g++ -std=c++20 -O2 -Wall -Wextra -Iinclude src/join.cpp src/DiskManager.cpp src/Page.cpp -o bin/join"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "./bin/join"
+[[workflows.workflow]]
+name = "Run Table"
+author = 18972025
+mode = "sequential"
+  [[workflows.workflow.tasks]]
+  task = "shell.exec"
+  args = "make run-table"
 
 [[workflows.workflow]]
 name = "Run Join"
 author = 18972025
 mode = "sequential"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "g++ -std=c++20 -O2 -Wall -Wextra -Iinclude src/join.cpp src/DiskManager.cpp src/Page.cpp -o bin/join"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "./bin/join"
+  [[workflows.workflow.tasks]]
+  task = "shell.exec"
+  args = "make run-join"
 
 [[workflows.workflow]]
 name = "Run Select"
 author = 18972025
 mode = "sequential"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "g++ -std=c++20 -O2 -Wall -Wextra -Iinclude src/select.cpp src/DiskManager.cpp src/Page.cpp -o bin/select"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "./bin/select"
+  [[workflows.workflow.tasks]]
+  task = "shell.exec"
+  args = "make run-select"

@@ -1,36 +1,32 @@
-#pragma once
-
 #ifndef _CLOCK_REPLACER_HPP_
 #define _CLOCK_REPLACER_HPP_
 
+#include <array>
+#include <optional>
 #include "Replacer.hpp"
 
 template <size_t N>
 struct ClockReplacer : public Replacer<N>
 {
-	size_t clock_hand{0};
-	std::array<bool, N> reference_bits{false};
+    size_t clock_hand;
+    std::array<bool, N> reference_bits;
 
-	ClockReplacer() = default;
-	virtual ~ClockReplacer() = default;
+    ClockReplacer()
+        : clock_hand(0), reference_bits()
+    {
+        // std::array<bool,N> default-inits to false; no fill needed.
+    }
 
-	/**
-	 * @brief Remove the victim frame as defined by the replacement policy.
-	 * @return the id of the victim frame, std::nullopt if no victim was found
-	 */
-	auto victim() -> std::optional<frame_id_t> override;
+    virtual ~ClockReplacer() {}
 
-	/**
-	 * @brief Pins a frame, indicating that it should not be victimized until it is unpinned.
-	 * @param frame_id the id of the frame to pin
-	 */
-	auto pin(frame_id_t frame_id) -> void override;
+    // Remove victim per policy
+    virtual std::optional<frame_id_t> victim();
 
-	/**
-	 * @brief Unpins a frame, indicating that it can now be victimized.
-	 * @param frame_id the id of the frame to unpin
-	 */
-	auto unpin(frame_id_t frame_id) -> void override;
+    // Mark as pinned
+    virtual void pin(frame_id_t frame_id);
+
+    // Mark as unpinned
+    virtual void unpin(frame_id_t frame_id);
 };
 
 #include "../src/ClockReplacer.inl"

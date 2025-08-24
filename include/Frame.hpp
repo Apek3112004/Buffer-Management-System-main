@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef _FRAME_HPP_
 #define _FRAME_HPP_
 
@@ -7,13 +5,19 @@
 
 struct Frame
 {
-	Page page{};		   // The page stored in the frame
-	uint16_t pin_count{0}; // The number of pins on the page
+    Page page;          // The page stored in the frame
+    uint16_t pin_count; // The number of pins on the page
+
+    Frame() {
+        pin_count = 0;   // initialize explicitly
+        // page default constructor already zeroes its data and id
+    }
 };
 
-using PFrame = Frame *;
-using CPFrame = const Frame *;
-using RFrame = Frame &;
-using CRFrame = const Frame &;
+// Aliases
+typedef Frame*       PFrame;
+typedef const Frame* CPFrame;
+typedef Frame&       RFrame;
+typedef const Frame& CRFrame;
 
 #endif // _FRAME_HPP_

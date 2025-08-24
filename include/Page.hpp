@@ -1,25 +1,34 @@
-#pragma once
-
 #ifndef _PAGE_HPP_
 #define _PAGE_HPP_
 
 #include <array>
-#include <functional>
-
+#include <cstddef>
 #include "Types.hpp"
 
 struct Page
 {
-	static page_id_t generateId;		// genrates the page id
-	page_id_t id{};						// id of the page
-	std::array<char, PAGE_SIZE> data{}; // Stores the actual data
+    // Global counter for page IDs
+    static page_id_t next_id;
 
-	static std::function<page_id_t()> generate_page_id;
+    // Per-page state
+    page_id_t id;                           // initialized to 0 in ctor
+    std::array<char, PAGE_SIZE> data;       // zeroed in ctor
+
+    Page()
+        
+    {
+		id = 0; 
+        data.fill(0);
+    }
+
+    // Returns a new unique page id (0,1,2,...)
+    static page_id_t generate_page_id();
 };
 
-using PPage = Page *;
-using CPPage = const Page *;
-using RPage = Page &;
-using CRPage = const Page &;
+// Aliases
+typedef Page*       PPage;
+typedef const Page* CPPage;
+typedef Page&       RPage;
+typedef const Page& CRPage;
 
 #endif // _PAGE_HPP_

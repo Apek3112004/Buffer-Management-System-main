@@ -1,29 +1,69 @@
-CXX = g++
-CXXFLAGS = -std=c++20 -O2 -Wall -Wextra -Iinclude
+# Compiler & flags
+CXX      := g++
+CXXFLAGS := -std=c++17 -O2 -Wall -Wextra -Iinclude
+LDFLAGS  := 
+LDLIBS   := 
 
-SRC = src
-BIN = bin
-FILES = files
+# Dirs
+SRCDIR := src
+INCDIR := include
+BINDIR := bin
 
-all: table join select
+# Common sources used by all programs
+COMMON_SRCS := $(SRCDIR)/DiskManager.cpp $(SRCDIR)/Page.cpp
+COMMON_OBJS := $(COMMON_SRCS:.cpp=.o)
 
-table: table.cpp include/Tables.hpp
-	$(CXX) $(CXXFLAGS) table.cpp -o $(BIN)/table
+# Drivers
+TABLE_SRC    := table.cpp
+JOIN_SRC     := $(SRCDIR)/join.cpp
+SELECT_SRC   := $(SRCDIR)/select.cpp
+UNTABLEE_SRC := untablee.cpp
 
-join: $(SRC)/join.cpp include/Tables.hpp
-	$(CXX) $(CXXFLAGS) $(SRC)/join.cpp -o $(BIN)/join
+TABLE_BIN    := $(BINDIR)/table
+JOIN_BIN     := $(BINDIR)/join
+SELECT_BIN   := $(BINDIR)/select
+UNTABLEE_BIN := $(BINDIR)/untablee
 
-select: $(SRC)/select.cpp include/Tables.hpp
-	$(CXX) $(CXXFLAGS) $(SRC)/select.cpp -o $(BIN)/select
+# Default target
+all: dirs $(TABLE_BIN) $(JOIN_BIN) $(SELECT_BIN) $(UNTABLEE_BIN)
 
-run-table: table
-	./$(BIN)/table
+# Build rules
+$(TABLE_BIN): $(TABLE_SRC) $(COMMON_OBJS) $(INCDIR)/Tables.hpp
+	$(CXX) $(CXXFLAGS) $< $(COMMON_OBJS) -o $@ $(LDFLAGS) $(LDLIBS)
 
-run-join: join
-	./$(BIN)/join
+$(JOIN_BIN): $(JOIN_SRC) $(COMMON_OBJS) $(INCDIR)/Tables.hpp
+	$(CXX) $(CXXFLAGS) $< $(COMMON_OBJS) -o $@ $(LDFLAGS) $(LDLIBS)
 
-run-select: select
-	./$(BIN)/select
+$(SELECT_BIN): $(SELECT_SRC) $(COMMON_OBJS) $(INCDIR)/Tables.hpp
+	$(CXX) $(CXXFLAGS) $< $(COMMON_OBJS) -o $@ $(LDFLAGS) $(LDLIBS)
 
+$(UNTABLEE_BIN): $(UNTABLEE_SRC) $(COMMON_OBJS) $(INCDIR)/Tables.hpp
+	$(CXX) $(CXXFLAGS) $< $(COMMON_OBJS) -o $@ $(LDFLAGS) $(LDLIBS)
+
+# Compile common sources
+$(SRCDIR)/%.o: $(SRCDIR)/%.cpp $(INCDIR)/%.hpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Ensure bin dir exists
+dirs:
+	@mkdir -p $(BINDIR)
+
+# Convenience run targets
+run-table: $(TABLE_BIN)
+	./$(TABLE_BIN)
+
+run-join: $(JOIN_BIN)
+	./$(JOIN_BIN)
+
+run-select: $(SELECT_BIN)
+	./$(SELECT_BIN)
+
+run-untablee: $(UNTABLEE_BIN)
+	./$(UNTABLEE_BIN)
+
+# Clean
 clean:
-	rm -f $(BIN)/*
+	@rm -f $(SRCDIR)/*.o
+	@rm -f $(BINDIR)/*
+
+.PHONY: all dirs clean run-table run-join run-select run-untablee

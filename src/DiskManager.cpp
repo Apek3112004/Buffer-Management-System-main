@@ -1,39 +1,71 @@
 #include "DiskManager.hpp"
+#include <fstream>
+#include <array>
+#include <vector>
+#include <optional>
+#include <string>
+#include <cstring>   // for memset
 
-auto DiskManager::read_page(page_id_t page_id)
-	-> std::optional<Page>
+using namespace std;
+
+optional<Page> DiskManager::read_page(page_id_t page_id)
 {
-	++num_ios;
-	if (pages.find(page_id) != std::end(pages))
-		return pages[page_id];
+    num_ios = num_ios + 1;
 
-	return std::nullopt;
+    // Check if the page exists
+    if (pages.find(page_id) != pages.end())
+    {
+        return pages[page_id];
+    }
+
+    return nullopt;
 }
 
-auto DiskManager::add_page(const std::string &filename)
-	-> std::optional<std::vector<page_id_t>>
+optional<vector<page_id_t> > DiskManager::add_page(const string &filename)
 {
-	std::ifstream file{filename, std::ios::binary};
-	if (!file.is_open())
-		return std::nullopt;
+    ifstream file(filename.c_str(), ios::binary);
+    if (!file.is_open())
+    {
+        return nullopt;
+    }
 
-	std::array<char, PAGE_SIZE> data{};
-	std::vector<page_id_t> page_ids{};
-	while (file.read(data.data(), PAGE_SIZE))
-	{
-		Page page{Page::generate_page_id(), std::move(data)};
-		pages[page.id] = std::move(page);
-		page_ids.push_back(page.id);
+    array<char, PAGE_SIZE> data;
+    data.fill(0);
 
-		data.fill(0);
-	}
+    vector<page_id_t> page_ids;
 
-	if (file.gcount() > 0)
-	{
-		Page page{Page::generate_page_id(), std::move(data)};
-		pages[page.id] = std::move(page);
-		page_ids.push_back(page.id);
-	}
+    // Read full pages
+    while (file.read(data.data(), PAGE_SIZE))
+    {
+        Page page;                      // create a page
+        page.id = Page::generate_page_id();
 
-	return page_ids;
+        // copy data into page
+        for (size_t i = 0; i < PAGE_SIZE; ++i)
+        {
+            page.data[i] = data[i];
+        }
+
+        pages[page.id] = page;
+        page_ids.push_back(page.id);
+
+        data.fill(0);
+    }
+
+    // Handle last partial page
+    if (file.gcount() > 0)
+    {
+        Page page;
+        page.id = Page::generate_page_id();
+
+        for (size_t i = 0; i < PAGE_SIZE; ++i)
+        {
+            page.data[i] = data[i];
+        }
+
+        pages[page.id] = page;
+        page_ids.push_back(page.id);
+    }
+
+    return page_ids;
 }

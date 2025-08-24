@@ -1,169 +1,142 @@
 /**
- * Simulation the following join operation:
- * SELECT
- * 		employee.first_name, employee.last_name, company.fname
- * FROM
- * 		employee
- * INNER JOIN
- * 		company
- * ON
- * 		employee.company_id = company.id
+ * SELECT employee.first_name, employee.last_name, company.name
+ * FROM employee
+ * INNER JOIN company
+ * ON employee.company_id = company.id
  */
 
 #include <chrono>
-#include <format>
+#include <iomanip>
 #include <iostream>
 #include <random>
 #include <thread>
-
-using namespace std::literals;
+#include <vector>
 
 #include "BufferPoolManager.hpp"
 #include "ClockReplacer.hpp"
 #include "DiskManager.hpp"
-#include "LRUReplacer.hpp"
-#include "MRUReplacer.hpp"
+#include "Tables.hpp"
 #include "Types.hpp"
 
-#include "Tables.hpp"
+const std::size_t BUFFERSIZE = 32;
 
-constexpr size_t BUFFERSIZE = 32;
-
+// Helper to view page data as array of T
 template <typename T>
-auto page_to_array(RPage page) -> std::array<T, PAGE_SIZE / sizeof(T)> *
-{
-	return reinterpret_cast<std::array<T, PAGE_SIZE / sizeof(T)> *>(&page.data);
-};
+std::array<T, PAGE_SIZE / sizeof(T> )* page_to_array(RPage page) {
+    return reinterpret_cast<std::array<T, PAGE_SIZE / sizeof(T> )*>(&page.data);
+}
 
-int main()
-{
-	DiskManager disk_manager{};
-	 auto replacer = ClockReplacer<BUFFERSIZE>{};
-	// auto replacer = LRUReplacer<BUFFERSIZE>{};
-	//auto replacer = MRUReplacer<BUFFERSIZE>{};
-	BufferPoolManager<BUFFERSIZE> buffer_pool_manager{&disk_manager, &replacer};
+typedef BufferPoolManager<BUFFERSIZE> BPM;
 
-	auto _company_pages = disk_manager.add_page("./files/company.bin");
-	auto _employee_pages = disk_manager.add_page("./files/employee.bin");
+// No lambdas / no nested functions — plain helpers:
+static Page blocking_fetch_page(page_id_t page_id, BPM& bpm) {
+    static std::mt19937_64 gen((std::random_device())());
+    static std::uniform_int_distribution<int> dis(10, 20);
 
-	auto fetch_page = [&](page_id_t page_id) -> Page
-	{
-		static std::mt19937_64 gen{std::random_device{}()};
-		static std::uniform_int_distribution dis{10, 20};
+    for (;;) {
+        std::optional<Page> page = bpm.fetch_page(page_id);
+        if (page.has_value()) return *page;
 
-		while (true)
-		{
-			auto page = buffer_pool_manager.fetch_page(page_id);
-			if (page.has_value())
-				return *page;
+        std::fputs("No Frame Free\n", stderr);
+        std::this_thread::sleep_for(std::chrono::milliseconds(dis(gen)));
+    }
+}
 
-			std::fputs("No Frame Free\n", stderr);
-			std::this_thread::sleep_for(std::chrono::milliseconds{dis(gen)});
-		}
-	};
+static void delayed_unpin(page_id_t page_id, BPM& bpm) {
+    static std::mt19937_64 gen((std::random_device())());
+    static std::uniform_int_distribution<int> dis(10, 20);
 
-	auto unpin_page = [&](page_id_t page_id)
-	{
-		static std::mt19937_64 gen{std::random_device{}()};
-		static std::uniform_int_distribution dis{10, 20};
+    std::this_thread::sleep_for(std::chrono::milliseconds(dis(gen)));
+    bpm.unpin_page(page_id);
+}
 
-		std::this_thread::sleep_for(std::chrono::milliseconds{dis(gen)});
-		buffer_pool_manager.unpin_page(page_id);
-	};
+int main() {
+    DiskManager disk_manager;
+    ClockReplacer<BUFFERSIZE> replacer;
+    BPM buffer_pool_manager(&disk_manager, &replacer);
 
-	if (not _company_pages.has_value() or
-		not _employee_pages.has_value())
-	{
-		fputs("Error opening file", stderr);
-		return EXIT_FAILURE;
-	}
+    std::optional<std::vector<page_id_t> > _company_pages  = disk_manager.add_page("./files/company.bin");
+    std::optional<std::vector<page_id_t> > _employee_pages = disk_manager.add_page("./files/employee.bin");
 
-	auto company_pages = _company_pages->begin();
-	auto employee_pages = _employee_pages->begin();
+    if (!_company_pages.has_value() || !_employee_pages.has_value()) {
+        std::fputs("Error opening file\n", stderr);
+        return EXIT_FAILURE;
+    }
 
-	std::cout << std::format("{:30}\t{:30}\t{:50}\n\n",
-							 "First Name", "Last Name", "Company Name");
+    const std::vector<page_id_t>& company_pages  = *_company_pages;
+    const std::vector<page_id_t>& employee_pages = *_employee_pages;
 
-	// Merge-Join Algorithm
+    std::cout << std::left
+              << std::setw(30) << "First Name" << '\t'
+              << std::setw(30) << "Last Name"  << '\t'
+              << std::setw(50) << "Company Name" << "\n\n";
 
-	// Fetch the first page in the employees table
-	auto employee_page = fetch_page(*employee_pages);
+    // Start with first pages
+    std::size_t ci = 0, ei = 0;
+    if (ei == employee_pages.size() || ci == company_pages.size()) {
+        std::cout << "No data.\n";
+        return 0;
+    }
 
-	// Fetch the first page in the companys table
-	auto company_page = fetch_page(*company_pages);
+    Page employee_page = blocking_fetch_page(employee_pages[ei], buffer_pool_manager);
+    Page company_page  = blocking_fetch_page(company_pages[ci],  buffer_pool_manager);
 
-	// Get the first tuple of the employees table
-	auto employee_tuple = page_to_array<Employee>(employee_page)->begin();
+    std::array<Employee, PAGE_SIZE / sizeof(Employee)>& earr = *page_to_array<Employee>(employee_page);
+    std::array<Company,  PAGE_SIZE / sizeof(Company) >& carr = *page_to_array<Company>(company_page);
 
-	// Get the first tuple of the companys table
-	auto company_tuple = page_to_array<Company>(company_page)->begin();
+    std::size_t eidx = 0, cidx = 0;
 
-	while (employee_pages != _employee_pages->end() or
-		   company_pages != _company_pages->end())
-	{
-		if (*company_tuple == Company{} or
-			*employee_tuple == Employee{})
-			break;
-			
-		if (company_tuple->id < employee_tuple->company_id)
-		{
-			++company_tuple;
+    // Merge-join like traversal
+    while (ei < employee_pages.size() && ci < company_pages.size()) {
+        if (earr[eidx] == Employee() || carr[cidx] == Company()) {
+            break;
+        }
 
-			if (company_tuple == page_to_array<Company>(company_page)->end())
-			{
-				(std::thread{unpin_page, *company_pages}).detach();
-				// buffer_pool_manager.unpin_page(*company_pages);
-				++company_pages;
+        if (carr[cidx].id < earr[eidx].company_id) {
+            // advance company tuple
+            ++cidx;
+            if (cidx >= carr.size() || carr[cidx] == Company()) {
+                std::thread t(delayed_unpin, company_pages[ci], std::ref(buffer_pool_manager));
+                t.detach();
+                ++ci;
+                if (ci >= company_pages.size()) break;
+                company_page = blocking_fetch_page(company_pages[ci], buffer_pool_manager);
+                carr = *page_to_array<Company>(company_page);
+                cidx = 0;
+            }
+        } else if (carr[cidx].id > earr[eidx].company_id) {
+            // advance employee tuple
+            ++eidx;
+            if (eidx >= earr.size() || earr[eidx] == Employee()) {
+                std::thread t(delayed_unpin, employee_pages[ei], std::ref(buffer_pool_manager));
+                t.detach();
+                ++ei;
+                if (ei >= employee_pages.size()) break;
+                employee_page = blocking_fetch_page(employee_pages[ei], buffer_pool_manager);
+                earr = *page_to_array<Employee>(employee_page);
+                eidx = 0;
+            }
+        } else {
+            // match
+            std::cout << std::left
+                      << std::setw(30) << earr[eidx].fname.data() << '\t'
+                      << std::setw(30) << earr[eidx].lname.data() << '\t'
+                      << std::setw(50) << carr[cidx].name.data()  << '\n';
 
-				if (company_pages == _company_pages->end())
-					break;
+            ++eidx;
+            if (eidx >= earr.size() || earr[eidx] == Employee()) {
+                std::thread t(delayed_unpin, employee_pages[ei], std::ref(buffer_pool_manager));
+                t.detach();
+                ++ei;
+                if (ei >= employee_pages.size()) break;
+                employee_page = blocking_fetch_page(employee_pages[ei], buffer_pool_manager);
+                earr = *page_to_array<Employee>(employee_page);
+                eidx = 0;
+            }
+        }
+    }
 
-				company_page = fetch_page(*company_pages);
-				company_tuple = page_to_array<Company>(company_page)->begin();
-			}
-		}
-		else if (company_tuple->id > employee_tuple->company_id)
-		{
-			++employee_tuple;
-
-			if (employee_tuple == page_to_array<Employee>(employee_page)->end())
-			{
-				(std::thread{unpin_page, *employee_pages}).detach();
-				// buffer_pool_manager.unpin_page(*employee_pages);
-				++employee_pages;
-
-				if (employee_pages == _employee_pages->end())
-					break;
-
-				employee_page = fetch_page(*employee_pages);
-				employee_tuple = page_to_array<Employee>(employee_page)->begin();
-			}
-		}
-
-		else // company_tuple->id == employee_tuple->company_id
-		{
-			std::cout << std::format("{:30}\t{:30}\t{:50}\n",
-									 employee_tuple->fname.data(),
-									 employee_tuple->lname.data(),
-									 company_tuple->name.data());
-
-			++employee_tuple;
-
-			if (employee_tuple == page_to_array<Employee>(employee_page)->end())
-			{
-				(std::thread{unpin_page, *employee_pages}).detach();
-				// buffer_pool_manager.unpin_page(*employee_pages);
-				++employee_pages;
-
-				if (employee_pages == _employee_pages->end())
-					break;
-
-				employee_page = fetch_page(*employee_pages);
-				employee_tuple = page_to_array<Employee>(employee_page)->begin();
-			}
-		}
-	}
-
-	std::cout << "\nNumber of I/Os: " << disk_manager.num_ios << '\n'
-			  << "Number of pages: " << disk_manager.pages.size() << '\n';
+    std::cout << "\nNumber of I/Os: " << disk_manager.num_ios
+              << "\nNumber of pages: " << disk_manager.pages.size() << '\n';
+    return 0;
 }
