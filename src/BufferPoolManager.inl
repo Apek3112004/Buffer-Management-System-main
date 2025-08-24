@@ -1,71 +1,46 @@
 #ifndef _BUFFER_POOL_MANAGER_INL_
 #define _BUFFER_POOL_MANAGER_INL_
 
+#include <cstdio>
 #include <iostream>
 #include <optional>
-#include <map>
-#include <cstdio>
-#include "DiskManager.hpp"
-#include "Frame.hpp"
-#include "Page.hpp"
-#include "Replacer.hpp"
 
-// Template Buffer Pool Manager
 template <size_t N>
-class BufferPoolManager
+BufferPoolManager<N>::BufferPoolManager(PDiskManager disk_mgr, PReplacer<N> repl)
 {
-private:
-    PDiskManager disk_manager;
-    PReplacer<N> replacer;
-    Frame frames[N];
-    std::map<page_id_t, int> page_table;
-    FreeList free_list;
+    disk_manager = disk_mgr;
+    replacer     = repl;
+    replacer->frames = &this->frames;   // replacers expect std::array<Frame,N>*
+    // free_list is already constructed by its own default ctor
+}
 
-public:
-    BufferPoolManager(PDiskManager _disk_manager, PReplacer<N> _replacer)
+template <size_t N>
+std::optional<Page> BufferPoolManager<N>::fetch_page(page_id_t page_id)
+{
+    typename std::unordered_map<page_id_t, frame_id_t>::iterator it = page_table.find(page_id);
+    if (it != page_table.end())
     {
-        disk_manager = _disk_manager;
-        replacer = _replacer;
-        replacer->frames = &this->frames;
+        frame_id_t frame_id = it->second;
+        replacer->pin(frame_id);
+        std::fprintf(stderr, "Hit    Page %4u\n", page_id);
+        return frames[frame_id].page;
     }
 
-    std::optional<Page> fetch_page(page_id_t page_id)
+    // Not resident: minimal version (your original behavior) — don’t load from disk here.
+    return std::nullopt;
+}
+
+template <size_t N>
+bool BufferPoolManager<N>::unpin_page(page_id_t page_id)
+{
+    typename std::unordered_map<page_id_t, frame_id_t>::iterator it = page_table.find(page_id);
+    if (it != page_table.end())
     {
-        typename std::map<page_id_t, int>::iterator it = page_table.find(page_id);
-        if (it != page_table.end())
-        {
-            int frame_id = it->second;
-            Frame &frame = frames[frame_id];
-            replacer->pin(frame_id);
-
-            std::fprintf(stderr, "Hit    Page %4u\n", page_id);
-            return frame.page;
-        }
-
-        return std::nullopt;
+        frame_id_t frame_id = it->second;
+        replacer->unpin(frame_id);
+        return true;
     }
-
-    bool unpin_page(page_id_t page_id)
-    {
-        typename std::map<page_id_t, int>::iterator it = page_table.find(page_id);
-        if (it != page_table.end())
-        {
-            int frame_id = it->second;
-            Frame &frame = frames[frame_id];
-            replacer->unpin(frame_id);
-            return true;
-        }
-        return false;
-    }
-
-    /*
-    Responsibilities:
-    - Maintain fixed-size pool of frames (frames[N]), each holds one page.
-    - Map page_id -> frame index using page_table.
-    - Use replacer (LRU/MRU/Clock) to decide victims, pin/unpin pages.
-    - Use free_list to allocate free frames quickly.
-    - Provide APIs fetch_page() and unpin_page().
-    */
-};
+    return false;
+}
 
 #endif // _BUFFER_POOL_MANAGER_INL_
